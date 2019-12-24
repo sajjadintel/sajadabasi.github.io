@@ -1,7 +1,13 @@
 <html>
     <head></head>
     <body>
-        <iframe width="500" height="500" src="https://sajadabasi.ir/">
+        <iframe id="myIframe" width="500" height="500" src="https://sajadabasi.ir/">
         </iframe>
     </body>
+    <script>
+    var loc = window.location.toString(),
+    params = loc.split('?')[1],
+    iframe = document.getElementById('myIframe');
+    iframe.src = iframe.src + '?' + params;
+    </script>
 </html>
